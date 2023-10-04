@@ -1,6 +1,17 @@
-import { useEffect,useState } from "react";
-import { ReactDOM } from "react";
+import { useState } from "react";
+const Car = (props) => {
+  return <h2>I am a {props.brand}!</h2>;
+};
 
+const Garage = () => {
+  const carName = "Ford";
+  return (
+    <>
+      <h1>Who lives in my garage?</h1>
+      <Car brand={carName} />
+    </>
+  );
+};
 
 const Counter = () => {
   const [counterValue, setCounterValue] = useState(0);
@@ -24,4 +35,5 @@ const Counter = () => {
     </div>
   );
 };
+
 export default Counter;
